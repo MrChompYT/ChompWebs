@@ -1,0 +1,66 @@
+/* Past Work Styles */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #fffdf7;
+    color: #444;
+    padding: 20px;
+}
+
+header {
+    background-color: #fa983a;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    max-width: 960px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    color: #fa983a;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: square inside;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+}
