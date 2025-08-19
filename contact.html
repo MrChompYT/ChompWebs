@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — Sharkbite Sites</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="ocean">
+
+<header class="header">
+  <div class="nav container">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-shark.png" alt="Sharkbite Sites logo">
+      <span>Sharkbite Sites</span>
+    </a>
+    <nav class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section container">
+  <h1 class="section-title">Let’s make something with bite</h1>
+  <p class="kicker">Drop me a line — I’ll get back to you quick with ideas, timelines, and next steps.</p>
+
+  <div class="grid grid-2">
+    <form class="card" action="https://formspree.io/f/xrblpawl" method="POST">
+      <div class="form-row">
+        <div>
+          <label for="name">Your name</label>
+          <input id="name" name="name" class="input" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="_replyto" type="email" class="input" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="package">Package</label>
+          <select id="package" name="package" class="input">
+            <option value="">Not sure yet</option>
+            <option>Basic ($50)</option>
+            <option>Pro ($75)</option>
+            <option>Ultimate ($100)</option>
+          </select>
+        </div>
+        <div>
+          <label for="timeline">Timeline</label>
+          <input id="timeline" name="timeline" class="input" placeholder="e.g., 1–2 weeks">
+        </div>
+      </div>
+
+      <div>
+        <label for="message">Project details</label>
+        <textarea id="message" name="message" rows="6" class="input" placeholder="Tell me about your goals, style, and must‑haves..."></textarea>
+      </div>
+
+      <button class="btn" type="submit">Send message</button>
+    </form>
+
+    <aside class="card">
+      <h3>Prefer Discord?</h3>
+      <p>Join my server for quick chats, file sharing, and rapid updates.</p>
+      <a class="btn" href="https://discord.gg/FcR5PUsGb6" target="_blank" rel="noopener">Join on Discord</a>
+      <hr style="margin:1.5rem 0;opacity:.2">
+      <h4>Direct contact</h4>
+      <ul class="features">
+        <li>Email: sharkbitesites@gmail.com</li>
+        <li>Hours: Mon–Fri, 9–5 AEST</li>
+      </ul>
+    </aside>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">© Sharkbite Sites</div>
+</footer>
+
+<script>
+  // Preselect package from ?pkg=
+  const params = new URLSearchParams(location.search);
+  const pkg = params.get('pkg');
+  if(pkg){ document.getElementById('package').value = pkg; }
+</script>
+
+</body>
+</html>

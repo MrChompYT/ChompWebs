@@ -1,0 +1,217 @@
+/* ========== Base + Variables ========== */
+:root{
+  --ink:#0a1020;
+  --deep:#0c1d39;
+  --mid:#143d66;
+  --aqua:#17b1e3;
+  --foam:#e9f6ff;
+  --accent:#34d399; /* mint pop */
+  --warn:#f59e0b;   /* gold pop */
+  --radius:16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+  --shadow-soft: 0 6px 16px rgba(0,0,0,.18);
+  --maxw:1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:#f4f8fc;
+  background:var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial;
+  line-height:1.4;
+}
+
+a{color:var(--aqua); text-decoration:none}
+a:hover{opacity:.9}
+img{max-width:100%; display:block}
+
+/* Layout helpers */
+.container{max-width:var(--maxw); margin:0 auto; padding:24px}
+.section{padding:56px 0}
+.grid{display:grid; gap:24px}
+.grid-3{grid-template-columns: repeat(3, minmax(0,1fr))}
+.grid-2{grid-template-columns: repeat(2, minmax(0,1fr))}
+@media (max-width:900px){
+  .grid-3{grid-template-columns: 1fr 1fr}
+}
+@media (max-width:640px){
+  .grid-3,.grid-2{grid-template-columns: 1fr}
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:14px 18px; border-radius:12px; font-weight:700; letter-spacing:.2px;
+  background:linear-gradient(180deg, var(--aqua), #0ea5c6);
+  color:#03131e; border:0; box-shadow:var(--shadow); cursor:pointer;
+}
+.btn.secondary{background:linear-gradient(180deg,#2dd4bf,#14b8a6)}
+.btn.ghost{
+  background:transparent; color:var(--foam); border:1px solid rgba(255,255,255,.2);
+  box-shadow:none
+}
+
+/* Cards */
+.card{
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:var(--shadow-soft);
+  backdrop-filter: blur(8px);
+}
+
+/* Header/Nav */
+.header{
+  position:sticky; top:0; z-index:50; backdrop-filter: blur(8px);
+  background: linear-gradient(180deg, rgba(3,16,30,.85), rgba(3,16,30,.55));
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0}
+.brand{display:flex; align-items:center; gap:12px; font-weight:900; letter-spacing:.4px}
+.brand img{width:40px; height:40px; border-radius:50%}
+.navlinks{display:flex; align-items:center; gap:16px}
+.navlinks a{padding:10px 12px; border-radius:10px}
+.navlinks a.active,.navlinks a:hover{background:rgba(255,255,255,.08)}
+.menu-btn{display:none}
+@media (max-width:800px){
+  .menu-btn{display:inline-flex}
+  .navlinks{display:none}
+  .navlinks.open{display:flex; flex-direction:column; position:absolute; top:64px; right:16px; background:#061223; padding:14px; border-radius:12px; border:1px solid rgba(255,255,255,.1)}
+}
+
+/* Hero */
+.hero{
+  display:grid; gap:24px; align-items:center;
+  grid-template-columns: 1.1fr .9fr;
+  padding:48px 0 12px;
+}
+.hero h1{font-size: clamp(32px, 4vw, 52px); line-height:1.05; margin:0 0 10px}
+.hero p{font-size: clamp(16px, 1.4vw, 18px); opacity:.92}
+.hero .actions{display:flex; gap:12px; flex-wrap:wrap}
+@media (max-width:900px){ .hero{grid-template-columns:1fr} }
+
+/* Badges/Chips */
+.badge{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:8px 12px; border-radius:999px; font-weight:700; font-size:12px;
+  background:rgba(23,177,227,.12); border:1px solid rgba(23,177,227,.3); color:#bfefff
+}
+
+/* Pricing cards */
+.price{
+  display:flex; flex-direction:column; gap:14px
+}
+.price h3{margin:0; font-size:22px}
+.kicker{font-size:13px; letter-spacing:.3px; opacity:.8}
+.tag{
+  display:inline-block; padding:6px 10px; border-radius:999px;
+  background:rgba(52,211,153,.14); border:1px solid rgba(52,211,153,.3); color:#ccf5e6; font-weight:800; font-size:12px
+}
+ul.features{list-style:none; padding:0; margin:0; display:grid; gap:10px}
+ul.features li{display:flex; gap:10px; align-items:flex-start}
+ul.features li:before{content:"✓"; color:var(--accent); font-weight:900}
+
+/* Ocean background texture */
+.ocean{
+  position:relative; overflow:hidden;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(23,177,227,.18), transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, rgba(20,61,102,.5), transparent 50%),
+    linear-gradient(180deg, #051225, #0a1c35 60%, #0b2547);
+}
+.ocean:after, .ocean:before{
+  content:"";
+  position:absolute; inset:-20%;
+  background:
+    radial-gradient(12px 12px at 20% 30%, rgba(255,255,255,.18), transparent 60%),
+    radial-gradient(10px 10px at 40% 70%, rgba(255,255,255,.14), transparent 60%),
+    radial-gradient(8px 8px at 65% 45%, rgba(255,255,255,.12), transparent 60%),
+    radial-gradient(14px 14px at 80% 20%, rgba(255,255,255,.16), transparent 60%);
+  filter: blur(2px);
+  animation: drift 40s linear infinite;
+  opacity:.6;
+  pointer-events:none;
+}
+.ocean:before{
+  animation-duration: 60s;
+  transform: scale(1.1);
+  opacity:.35;
+}
+/* Soft wave stripes */
+.wave{
+  background:
+    repeating-linear-gradient(
+      -8deg,
+      rgba(255,255,255,.06) 0px,
+      rgba(255,255,255,.06) 4px,
+      transparent 4px,
+      transparent 22px
+    );
+  mask: linear-gradient(180deg, rgba(0,0,0,.7), transparent 70%);
+  border-radius: var(--radius);
+}
+
+/* Floating bubble tag */
+.floaty{
+  animation: float 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes drift{
+  from{transform: translateY(-2%) translateX(0)}
+  to{transform: translateY(2%) translateX(2%)}
+}
+@keyframes float{
+  0%{transform: translateY(0)}
+  50%{transform: translateY(-6px)}
+  100%{transform: translateY(0)}
+}
+
+/* Footer */
+.footer{
+  color:#cfe7ff; opacity:.9; font-size:14px;
+  border-top:1px solid rgba(255,255,255,.08)
+}
+
+/* Forms */
+.input, textarea{
+  width:100%; padding:12px 14px; background:rgba(255,255,255,.06); color:#e8f6ff;
+  border:1px solid rgba(255,255,255,.12); border-radius:12px; outline:none;
+}
+.input:focus, textarea:focus{border-color: rgba(23,177,227,.6)}
+label{display:block; margin:4px 0 8px; font-weight:700; opacity:.9}
+.form-row{display:grid; gap:14px; grid-template-columns:1fr 1fr}
+@media(max-width:640px){ .form-row{grid-template-columns:1fr} }
+
+.hero h1 {
+  font-size: clamp(34px, 3.2vw, 54px);
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: -0.5px; /* tighter, more human rhythm */
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px; /* slightly softer */
+  padding: 26px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+}
+
+.hero-img img {
+  transition: transform 0.4s ease;
+}
+
+.hero-img img:hover {
+  transform: scale(1.03) rotate(-1deg);
+}
+
