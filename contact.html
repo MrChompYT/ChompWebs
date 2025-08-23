@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharkbite Sites - Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="./assets/v16_203.png" alt="Sharkbite Sites Logo" class="logo-icon">
+                    <span class="logo-text">SHARKBITE SITES</span>
+                </div>
+                <h1 class="site-title">Sharkbite Sites</h1>
+            </div>
+            <nav class="navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="contact.html" class="nav-link home-btn">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero" id="contact">
+        <div class="hero-background">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+            <div class="hero-images">
+                <img src="./assets/v1_1047.png" alt="Hero Decoration" class="hero-img hero-img-1">
+                <img src="./assets/v16_226.png" alt="Hero Decoration" class="hero-img hero-img-2">
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text-box">
+                <h2 class="hero-title">Get In Touch</h2>
+                <p class="hero-description">
+                    Ready to start your project? Have questions about our services? 
+                    I'm here to help bring your vision to life. Let's discuss your project today.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <h2 class="section-title">Contact Information</h2>
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>chomp@sharkbitesites.com</p>
+                    <p class="contact-note">I'll respond within 24 hours</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Discord</h3>
+                    <p>Chomp#1234</p>
+                    <p class="contact-note">For quick questions and updates</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon">⏰</div>
+                    <h3>Response Time</h3>
+                    <p>24-48 hours</p>
+                    <p class="contact-note">During business hours</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon">🌍</div>
+                    <h3>Location</h3>
+                    <p>Remote Worldwide</p>
+                    <p class="contact-note">Serving clients globally</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-container">
+                <div class="form-content">
+                    <h2 class="section-title">Send Me a Message</h2>
+                    <p class="form-description">
+                        Fill out the form below and I'll get back to you as soon as possible. 
+                        Please include details about your project so I can provide the best service.
+                    </p>
+                    
+                    <form class="contact-form" action="https://formspree.io/f/xrblpawl" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="_replyto" required placeholder="Enter your email">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="package">Package Interest</label>
+                            <select id="package" name="package">
+                                <option value="">Select a package (optional)</option>
+                                <option value="basic">Basic Package - $50</option>
+                                <option value="pro">Pro Package - $75</option>
+                                <option value="ultimate">Ultimate Package - $100</option>
+                                <option value="custom">Custom Project</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range (optional)</option>
+                                <option value="under-100">Under $100</option>
+                                <option value="100-200">$100 - $200</option>
+                                <option value="200-500">$200 - $500</option>
+                                <option value="500+">$500+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Project Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline (optional)</option>
+                                <option value="asap">ASAP</option>
+                                <option value="1-2-weeks">1-2 weeks</option>
+                                <option value="1-month">1 month</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" rows="8" required placeholder="Tell me about your project, goals, and any specific requirements..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to my newsletter for web development tips and updates</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="form-sidebar">
+                    <div class="sidebar-content">
+                        <h3>What to Include</h3>
+                        <ul class="requirements-list">
+                            <li>Project description and goals</li>
+                            <li>Target audience</li>
+                            <li>Preferred style/design</li>
+                            <li>Must-have features</li>
+                            <li>Timeline expectations</li>
+                            <li>Budget considerations</li>
+                        </ul>
+                        
+                        <div class="sidebar-cta">
+                            <h4>Not sure what you need?</h4>
+                            <p>Schedule a free consultation call to discuss your project and get personalized recommendations.</p>
+                            <a href="#consultation" class="consultation-btn">Book Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">How long does a typical project take?</h3>
+                    <p class="faq-answer">Basic websites typically take 1-2 weeks, while more complex projects can take 3-4 weeks. I'll provide a detailed timeline during our initial consultation.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you provide ongoing support?</h3>
+                    <p class="faq-answer">Yes! Every package includes a warranty period (1-3 months depending on the package). After that, I offer ongoing support at $25 per change.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Can you work with my existing brand?</h3>
+                    <p class="faq-answer">Absolutely! I can work with your existing brand guidelines, colors, and logos to create a cohesive website that matches your brand identity.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What if I need changes after the project is complete?</h3>
+                    <p class="faq-answer">Changes during the warranty period are free. After that, I charge $25 per change, ensuring your website stays current and functional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="contact-cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Don't let your business stay offline. Let's work together to create a website that drives results and grows your business.</p>
+                <div class="cta-buttons">
+                    <a href="#contact-form" class="cta-primary">Start Your Project</a>
+                    <a href="shop.html" class="cta-secondary">View Packages</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-title">Sharkbite Sites</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <div class="icon-placeholder">f</div>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <div class="icon-placeholder">in</div>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <div class="icon-placeholder">▶</div>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <div class="icon-placeholder">📷</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Home page</h4>
+                        <ul>
+                            <li><a href="index.html">Home page</a></li>
+                            <li><a href="index.html#past-work">Past Work</a></li>
+                            <li><a href="index.html#prices">Prices</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Order now</h4>
+                        <ul>
+                            <li><a href="shop.html">Order now</a></li>
+                            <li><a href="shop.html#basic">Basic Pack</a></li>
+                            <li><a href="shop.html#pro">Pro Pack</a></li>
+                            <li><a href="shop.html#ultimate">Ultimate Pack</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Reach out</h4>
+                        <ul>
+                            <li><a href="contact.html">Reach out</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.html">Discord</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
